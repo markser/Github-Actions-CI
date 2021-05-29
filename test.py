@@ -13,7 +13,7 @@ class TestCalculator(unittest.TestCase):
     def test_add_fail(self):
         actual = calc.add(1, 2)
         expected = -1
-        self.assertFalse(actual, expected)
+        self.assertNotEqual(actual, expected)
 
     def test_sub_pass(self):
         actual = calc.sub(1, 2)
@@ -23,7 +23,7 @@ class TestCalculator(unittest.TestCase):
     def test_sub_fail(self):
         actual = calc.sub(1, 2)
         expected = 10
-        self.assertFalse(actual, expected)
+        self.assertNotEqual(actual, expected)
 
     def test_mul_pass(self):
         actual = calc.mul(1, 2)
@@ -33,7 +33,7 @@ class TestCalculator(unittest.TestCase):
     def test_mul_fail(self):
         actual = calc.mul(1, 2)
         expected = -1
-        self.assertFalse(actual, expected)
+        self.assertNotEqual(actual, expected)
 
     def test_div_pass(self):
         actual = calc.div(1, 2)
@@ -43,7 +43,7 @@ class TestCalculator(unittest.TestCase):
     def test_div_fail(self):
         actual = calc.div(1, 2)
         expected = 1
-        self.assertFalse(actual, expected)
+        self.assertNotEqual(actual, expected)
 
     def test_invalid_input(self):
         with self.assertRaises(TypeError):
